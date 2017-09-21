@@ -3,13 +3,16 @@
 ml-learn is a straightforward JS library to train ML models on your JSON data
 
 
-### Installing
+## Installing
 ```
 $ npm install ml-learn
 ```
 
-### Usage
-```
+# Usage
+
+## KNN
+
+```javascript
 const ml = require("ml-learn");
 /*
     data is a JSON array of objects
@@ -35,12 +38,14 @@ const stats = knn.predictStats(model.testData);
 console.log('Stats: ', stats);
 ```
 
-### TODO
-The current vision, 1.0, only provides the K Nearest Neighbor Classifier. Future versions will include
-    1. Naive Bayes
-    2. Linear Regression
-    3. Logistic Regression
-    4. SVM
-    5. Decision Tree
-    6. Random Forest
-    7. K-Means
+## TODO
+
+The current vision, 1.0, only provides the K Nearest Neighbor Classifier. 
+Future versions will include
+    * Naive Bayes
+    * Linear Regression
+    * Logistic Regression
+    * SVM
+    * Decision Tree
+    * Random Forest
+    * K-Means
