@@ -42,10 +42,10 @@ console.log('Stats: ', stats);
 
 The current vision, 1.0, only provides the K Nearest Neighbor Classifier. 
 Future versions will include
-    * Naive Bayes
-    * Linear Regression
-    * Logistic Regression
-    * SVM
-    * Decision Tree
-    * Random Forest
-    * K-Means
+* Naive Bayes
+* Linear Regression
+* Logistic Regression
+* SVM
+* Decision Tree
+* Random Forest
+* K-Means
