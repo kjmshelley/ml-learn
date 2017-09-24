@@ -1,6 +1,6 @@
 {
   "name": "ml-learn",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "ml-learn is a straightforward JS library to train ML models on your JSON data",
   "main": "index.js",
   "scripts": {
@@ -12,9 +12,21 @@
     "learning",
     "classification"
   ],
-  "author": "",
+  "author": "Jason Shelley",
   "license": "MIT",
   "dependencies": {
     "lodash": "^4.17.4"
-  }
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kjmshelley/ml-learn.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kjmshelley/ml-learn/issues"
+  },
+  "homepage": "https://github.com/kjmshelley/ml-learn#readme"
 }
