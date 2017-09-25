@@ -1,7 +1,24 @@
 # ml-learn
 
-ml-learn is a straightforward JS library to train ML models on your JSON data
+ml-learn machine learning in NodeJS. Simple tools for data mining and data analysis
 
+Developing machine learning models requires many steps 
+* Data Collection
+* Data Preparation
+* Data Analysis
+* Data training, validation and testing
+
+ml-learn provides all the tools to complete these four steps
+* DataSource: allows connecting to the following data sources
+     - SQL Server
+     - MySQL Server
+     - Mongo DB
+     - CSV or other flat file
+     - Excel
+   You can also format and prep your data upon loading for training your ML models.
+* Data Analysis: charting library to analyze your data
+* And finally....you can train, validate and test your models by using the already created ML alroithms in ml-learn.
+* You can also create your own models using the ml-stats also provided in this framework
 
 ## Installing
 ```
@@ -9,6 +26,64 @@ $ npm install ml-learn
 ```
 
 # Usage
+
+## Datasource
+
+### Database
+```javascript
+const ml = require("ml-learn");
+
+// connect to your datasource
+const dataSourceTypes = ml.DataSourceTypes;
+const ds = ml.DataSource({
+    type: dataSourceTypes.SQL_SERVER,
+    userName: 'YOUR-USERNAME',
+    password: 'YOUR-PASSWORD',
+    server: 'YOUR-SERVER',
+    db: 'DB'
+});
+
+let sql = 'SELECT TOP 1 * FROM dbo.Client';
+
+// get your data
+ds.getData(sp, function (err, data) {
+    if (err) {
+        console.log(err);
+        return;
+    }
+    console.log(data);
+    /*
+        prints:
+        { 
+            count: 1,
+            data: [ ... ]
+        }
+    */
+});
+
+/* for stored procedures */
+sql = 'dbo.sp_Test'; 
+const params = [];
+params.push({
+    name: "ClientId",
+    type: "int",
+    value: 123
+});
+ds.getData(sp, params, function (err, data) {
+    if (err) {
+        console.log(err);
+        return;
+    }
+    console.log(data);
+    /*
+        prints:
+        { 
+            count: 1,
+            data: [ ... ]
+        }
+    */
+});
+```
 
 ## KNN
 
